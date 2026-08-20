@@ -1,0 +1,22 @@
+retrieval:
+  embedding_model: BAAI/bge-m3
+  top_k: 20
+  rerank_top_k: 5
+  min_score: 0.35
+  chunk_size: 420
+  chunk_overlap: 60
+
+metadata_filters:
+  required:
+    - tenant_id
+  optional:
+    - department_id
+    - visibility
+    - effective_date
+    - doc_type
+
+answering:
+  citation_required: true
+  max_context_chunks: 5
+  no_answer_policy: 转人工或提示补充学校、学院、事项名称
+

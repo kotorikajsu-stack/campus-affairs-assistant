@@ -1,0 +1,56 @@
+flows:
+  学生证补办:
+    intent: 证明
+    slots:
+      - 学院
+      - 学号
+      - 遗失说明
+    materials:
+      - 本人身份证明
+      - 近期一寸照片
+      - 学院盖章的补办申请表
+    states:
+      - input_guard
+      - classify_intent
+      - collect_slots
+      - retrieve_policy
+      - verify_materials
+      - generate_answer
+      - output_guard
+
+  成绩单申请:
+    intent: 成绩
+    slots:
+      - 学院
+      - 成绩单语言
+      - 用途
+    materials:
+      - 身份证明
+      - 教务系统申请记录
+    states:
+      - input_guard
+      - classify_intent
+      - retrieve_policy
+      - verify_permissions
+      - generate_answer
+      - output_guard
+
+  缓考申请:
+    intent: 考试
+    slots:
+      - 学院
+      - 课程名称
+      - 考试时间
+      - 缓考原因
+    materials:
+      - 缓考申请表
+      - 医院证明或其他有效证明
+    states:
+      - input_guard
+      - classify_intent
+      - collect_slots
+      - retrieve_policy
+      - verify_materials
+      - generate_answer
+      - output_guard
+

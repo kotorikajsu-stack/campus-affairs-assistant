@@ -1,0 +1,44 @@
+# Web 后端框架：提供 API、Swagger 文档和前端页面入口
+fastapi>=0.115.0
+
+# ASGI 服务：用于启动 FastAPI
+uvicorn[standard]>=0.30.0
+
+# 数据校验：FastAPI 请求体和响应体模型依赖它
+pydantic>=2.7.0
+
+# 配置管理：后续如果把环境变量集中管理会用到
+pydantic-settings>=2.4.0
+
+# 单元测试框架
+pytest>=8.2.0
+
+# LangGraph 工作流：实现 guardrails -> intent -> retrieve -> rerank -> generate 的状态图
+langgraph>=0.2.60
+
+# embedding 模型加载：用于 BAAI/bge-small-zh-v1.5 文本向量化
+sentence-transformers>=3.0.0
+
+# Milvus Python 客户端和 Milvus Lite 本地向量库
+pymilvus[milvus_lite]>=2.4.0
+
+# 本地加载和调用 Qwen 大模型
+torch>=2.3.0
+transformers>=4.51.0
+accelerate>=0.33.0
+safetensors>=0.4.3
+
+# 文件上传表单解析：FastAPI 的 UploadFile / File 需要它
+python-multipart>=0.0.9
+
+# 图片读取：OCR 上传接口读取图片需要它
+pillow>=10.0.0
+
+# 可选 OCR Python 包：还需要额外安装系统级 Tesseract-OCR 程序
+pytesseract>=0.3.10
+
+# 可选文档解析工具：
+# MinerU 依赖较重，不默认放进 requirements。
+# 如果需要直接解析 PDF / 图片 / Office 原始文件，请单独执行：
+#   pip install uv
+#   uv pip install -U "mineru[all]"

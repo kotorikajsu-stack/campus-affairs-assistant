@@ -1,0 +1,23 @@
+input:
+  max_chars: 2000
+  blocked_intents:
+    - 伪造成绩
+    - 篡改成绩
+    - 绕过审核
+
+business:
+  supported_domains:
+    - 学籍
+    - 选课
+    - 考试
+    - 成绩
+    - 毕业
+    - 证明
+    - 奖助
+    - 处分
+
+output:
+  require_citation_when_context_exists: true
+  forbid_absolute_commitment: true
+  human_handoff_on_low_confidence: true
+

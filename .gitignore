@@ -1,0 +1,30 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.env
+data/raw/*
+data/processed/*
+data/datasets/*
+data/milvus/
+models/*
+logs/*
+MinerU_stu/output/
+tmp/
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!data/datasets/.gitkeep
+!models/.gitkeep
+!logs/.gitkeep
+
+# GitHub portfolio sample data.
+# Keep generic simulated Markdown data, but keep real raw attachments ignored.
+!data/raw/generic_university/
+!data/raw/generic_university/*/
+!data/raw/generic_university/*/.gitkeep
+!data/raw/generic_university/synthetic_docs/
+!data/raw/generic_university/synthetic_docs/**
+!data/processed/generic_university/
+!data/processed/generic_university/all_docs_chunks.jsonl
