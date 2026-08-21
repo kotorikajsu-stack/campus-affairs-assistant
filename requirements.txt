@@ -21,6 +21,7 @@ sentence-transformers>=3.0.0
 
 # Milvus Python 客户端和 Milvus Lite 本地向量库
 pymilvus[milvus_lite]>=2.4.0
+milvus-lite>=2.4.0
 
 # 本地加载和调用 Qwen 大模型
 torch>=2.3.0

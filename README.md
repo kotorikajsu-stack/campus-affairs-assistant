@@ -470,6 +470,26 @@ data/milvus/campus_edu.db
 
 同时又重建向量库，可能出现文件占用或 collection 状态冲突。
 
+### 9.4 缺少 Milvus Lite 时怎么办
+
+如果重建知识库时报错：
+
+```text
+ModuleNotFoundError: No module named 'milvus_lite'
+```
+
+说明当前环境没有安装本地 Milvus Lite 依赖。可以执行：
+
+```powershell
+python -m pip install milvus-lite
+```
+
+然后重新运行：
+
+```powershell
+python scripts\refresh_knowledge_base.py
+```
+
 ## 10. Qwen 大模型模块
 
 ### 10.1 当前推荐模型
